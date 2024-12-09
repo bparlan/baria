@@ -1,0 +1,466 @@
+.wrapper {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    background: linear-gradient(124deg, #ff2400, #aa0000, #e8a11d, #bec101, #0aba27, #019c7a, #190af7, #ae00f3, #df00be);
+    background-size: 1800% 1800%;
+
+    -webkit-animation: rainbow 18s ease infinite;
+    -z-animation: rainbow 18s ease infinite;
+    -o-animation: rainbow 18s ease infinite;
+    animation: rainbow 18s ease infinite;
+}
+
+@-webkit-keyframes rainbow {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
+
+@-moz-keyframes rainbow {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
+
+@-o-keyframes rainbow {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-size: 20px;
+    font-style: normal;
+    color: #fff;
+
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.language-selector {
+    position: fixed;
+    top: 40%;
+    left: -5px;
+    width: 80px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.language-selector button {
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px;
+    cursor: pointer;
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.language-selector button:hover {
+    background-color: #fff;
+    color: #000;
+
+}
+
+.language-selector button:active {
+    background-color: #fff;
+    color: #000;
+    font-weight: 900;
+}
+
+.container {
+    position: relative;
+    width: 760px;
+
+    border: 1px solid #fff;
+    padding: 0px;
+    left: 50%;
+
+    margin-top: 300px;
+    margin-bottom: 300px;
+    text-align: center;
+    background-color: black;
+
+    transform: translate(-50%, 0);
+}
+
+.title {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-size: 100px;
+    line-height: 0%;
+    font-style: normal;
+    letter-spacing: -2px;
+    margin-top: 70px;
+    margin-bottom: 40px;
+    padding: 0px;
+}
+
+
+@keyframes color-change {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 100%;
+    }
+}
+
+.slogan {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    line-height: 0%;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+}
+
+.parlan {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 54px;
+    margin-right: -7px;
+}
+
+.tech {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 54px;
+}
+
+.login button {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    transition: font-weight 1s ease-in-out;
+    /* Add transition */
+    font-size: 20px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 10px;
+    cursor: pointer;
+
+    transition: background-color 0.3s, color 0.3s;
+    min-width: 200px;
+    position: absolute;
+    bottom: 40px;
+    transform: translateX(-50%);
+}
+
+.login button:hover {
+    background-color: #fff;
+
+    /* Increase font weight on hover */
+    color: #000;
+    border: 1px solid #000;
+}
+
+#disconnectWalletButton {
+    display: none;
+    /* Hide Disconnect button by default */
+}
+
+.wallet-info {
+    position: relative;
+    font-size: 22px;
+}
+
+#walletAddress {
+    font-weight: 900;
+}
+
+#walletName {}
+
+#walletBalance {
+    font-style: italic;
+}
+
+.wallet-options {
+    width: 780px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+
+.header {
+    width: 680px;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+    margin: 20px;
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: #000;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.header:hover {
+
+    border-color: #ffffff;
+    background-color: #ffffff;
+    color: #000;
+}
+
+.option {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    color: #fff;
+
+    transition: border-color 0.5s, color 0.5s;
+    transition: background-color 0.5s, color 0.5s;
+    border: 1px solid #fff;
+}
+
+.option:hover {
+    border-color: #fff;
+    background-color: #ffffff;
+    color: #000;
+
+}
+
+.optheader {
+    width: 680px;
+    height: 300px;
+
+    display: flex;
+    /* Make it a flex container */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    position: relative;
+    vertical-align: middle;
+    padding: 20px;
+    margin: 20px;
+    color: #fff;
+    border: 1px solid #fff;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 80px;
+    letter-spacing: -2px;
+    background-color: #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pbox {
+    width: 680px;
+    height: 300px;
+
+    display: flex;
+    /* Make it a flex container */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    position: relative;
+    vertical-align: middle;
+    padding: 20px;
+    margin: 20px;
+    color: #fff;
+    border: 1px solid #fff;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-size: 22px;
+    text-align: justify;
+    background-color: #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pbox:hover {
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    color: #000;
+}
+
+.optheader:hover {
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    color: #000;
+}
+
+.thinheader {
+    width: 680px;
+    height: 150px;
+
+    display: flex;
+    /* Make it a flex container */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    position: relative;
+    vertical-align: middle;
+    padding: 20px;
+    margin: 20px;
+    color: #fff;
+    border: 1px solid #fff;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 80px;
+    line-height: 70px;
+    letter-spacing: -2px;
+    background-color: #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.thinheader:hover {
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    color: #000;
+}
+
+
+.option h2 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 26px;
+}
+
+
+.option button {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    transition: font-weight 1s ease-in-out;
+    /* Add transition */
+    font-size: 20px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    min-width: 200px;
+    position: absolute;
+    bottom: 40px;
+    transform: translateX(-50%);
+}
+
+.option button:hover {
+    background-color: #fff;
+    color: #000;
+
+    border: 1px solid #000;
+
+}
+
+.social-icons {
+    margin-top: 20px;
+    position: absolute;
+    width: 300px;
+    bottom: 40px;
+}
+
+.social-icons a {
+    color: #bb0000;
+    margin: 0 10px;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.social-icons a.twitter:hover {
+    color: #000;
+    /* Twitter color */
+}
+
+.social-icons a.telegram:hover {
+    color: #000;
+    /* Telegram color */
+}
+
+.social-icons a.discord:hover {
+    color: #000;
+    /* Telegram color */
+}
+
+.social-icons a.email:hover {
+    color: #000;
+    /* Telegram color */
+}
+
+ul.liste {
+    text-align: left;
+    list-style-type: square;
+}
