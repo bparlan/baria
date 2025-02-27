@@ -1,3 +1,14 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button:hover {
+    cursor: crosshair;
+}
+
 .wrapper {
     height: 100%;
     width: 100%;
@@ -71,6 +82,16 @@
     }
 }
 
+@keyframes color-change {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 100%;
+    }
+}
+
 body {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -78,20 +99,32 @@ body {
     font-size: 20px;
     font-style: normal;
     color: #fff;
-
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    align-items: left;
+}
+
+@media (min-width: 768px) {
+    .baria {
+        font-size: 120px;
+        font-weight: 900;
+    }
+}
+
+@media (max-width: 767px) {
+    .baria {
+        font-size: 90px;
+        font-weight: 900;
+    }
 }
 
 .language-selector {
-    position: fixed;
-    top: 40%;
-    left: -5px;
-    width: 80px;
-    height: 220px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    width: 220px;
+    height: 80px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -104,16 +137,13 @@ body {
     color: #fff;
     border: 1px solid #fff;
     padding: 10px;
-    cursor: pointer;
-    font-family: "Playfair Display", serif;
-    font-size: 16px;
+    font-family: "Inter", sans-serif;
     transition: background-color 0.3s, color 0.3s;
 }
 
 .language-selector button:hover {
     background-color: #fff;
     color: #000;
-
 }
 
 .language-selector button:active {
@@ -124,43 +154,35 @@ body {
 
 .container {
     position: relative;
-    width: 760px;
-
     border: 1px solid #fff;
     padding: 0px;
+    padding-bottom:20px;
+    gap: 0px;
     left: 50%;
-
-    margin-top: 300px;
-    margin-bottom: 300px;
+    margin-top: 20%;
+    margin-bottom: 20%;
     text-align: center;
     background-color: black;
-
     transform: translate(-50%, 0);
+    display: grid;
+    /* Default to 1 column for phones */
 }
 
-.title {
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 900;
-    font-size: 100px;
-    line-height: 0%;
-    font-style: normal;
-    letter-spacing: -2px;
-    margin-top: 70px;
-    margin-bottom: 40px;
-    padding: 0px;
-}
-
-
-@keyframes color-change {
-    0% {
-        background-position: 0%;
-    }
-
-    100% {
-        background-position: 100%;
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 384px); /* 2 columns of 380px for wider screens */
+        width: 786px;
+        transition: width 0.5s ease; /* Add transition for smooth resizing */
     }
 }
+
+@media (max-width: 767px) {
+    .container {
+        width: 402px;
+        transition: width 0.5s ease; /* Add transition for smooth resizing */
+    }
+}
+
 
 .slogan {
     font-family: "Playfair Display", serif;
@@ -170,6 +192,257 @@ body {
     font-style: italic;
     margin: 0;
     padding: 0;
+}
+
+.login button {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    transition: font-weight 1s ease-in-out;
+    font-size: 20px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 10px;
+    transition: background-color 0.3s, color 0.3s;
+    min-width: 200px;
+    position: absolute;
+    bottom: 40px;
+    transform: translateX(-50%);
+}
+
+.login button:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+#disconnectWalletButton { display: none; }
+
+.wallet-info {
+    margin-top: 20px;
+    position: relative;
+    font-size: 10px; }
+
+#walletAddress { font-weight: 900; }
+#walletBalance { font-size: 14px; font-style: italic; }
+
+.wallet-options {
+    width: 768px;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+body
+- wrapper
+- language selector
+- container  
+- + baslik
+- + wallet options
+- - + option
+- - - + liste
+- - + option wide 
+- - + pbox
+*/
+
+.baslik {
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+    margin: 20px 20px 0px 20px;
+    gap: 20px;
+    color: #fff;
+    border: 1px solid #ffffff;
+    background-color: #000;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+@media (min-width: 768px) {
+    .baslik {
+        width: 745px;
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 767px) {
+    .baslik {
+        width: 360px;
+        height: 300px;
+        grid-column: 1 / -1;
+        /* 360px width for phones */
+    }
+}
+
+.baslik:hover {
+    border-color: #ffffff;
+    background-color: #ffffff;
+    color: #000;
+}
+
+
+.option {
+    width: 360px;
+    height: 360px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    vertical-align: middle;
+    padding: 20px;
+    margin: 20px 20px 0px 20px;
+    gap: 10px;
+    color: #fff;
+    font-size: 1.2em;
+    background-color: #000;
+    transition: border-color 0.5s, color 0.5s;
+    transition: background-color 0.5s, color 0.5s;
+    border: 1px solid #fff;
+}
+
+@media (min-width: 768px) {
+    .option {
+        grid-column: auto;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 767px) {
+    .option {
+        grid-column: auto;
+        transform: translateX(0);
+    }
+}
+
+.option:hover {
+    border-color: #fff;
+    background-color: #ffffff;
+    color: #000;
+}
+
+.pbox {
+    height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    vertical-align: middle;
+    padding: 20px;
+    margin: 20px 20px 0px 20px;
+    color: #fff;
+    border: 1px solid #fff;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    text-align: justify;
+    background-color: #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+@media (min-width: 768px) {
+    .pbox {
+        font-size: 22px;
+        line-height: 24px;
+        width: 744px;
+        grid-column: auto;
+        transform: translateX(0);
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 767px) {
+    .pbox {
+        width: 360px;
+        grid-column: auto;
+        transform: translateX(0);
+    }
+}
+
+.pbox:hover {
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    color: #000;
+}
+
+.thinheader {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    vertical-align: middle;
+    padding: 0px;
+    margin: 0px;
+    color: #fff;
+    font-family: "Playfair Display", serif;
+    font-weight: 100;
+    font-style: italic;
+    letter-spacing: -2px;
+    background-color: #000;
+    transition: background-color 0.3s, color 0.3s;
+    grid-column: 1 / -1;
+}
+@media (min-width: 768px) {
+    .thinheader {
+        width: 760px;
+        line-height: 60px;
+        font-size: 70px;
+        transition: font-size 0.5s ease, width 0.5s ease, line-height 0.5s ease;
+        transition: width 0.5s ease;
+    }
+}
+
+@media (max-width: 767px) {
+    .thinheader {
+        width: 360px;
+        font-size: 50px;
+        line-height: 50px;
+        transition: font-size 0.5s ease, width 0.5s ease, line-height 0.5s ease;
+        transition: width 0.5s ease;
+    }
+}
+.option h2 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+.option button {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    transition: font-weight 1s ease-in-out;
+    /* Add transition */
+    font-size: 20px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 10px;
+    margin-top: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    min-width: 200px;
+    position: absolute;
+    bottom: 40px;
+    transform: translateX(-50%);
+}
+
+.option button:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
 }
 
 .parlan {
@@ -189,243 +462,6 @@ body {
     font-size: 54px;
 }
 
-.login button {
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: normal;
-    transition: font-weight 1s ease-in-out;
-    /* Add transition */
-    font-size: 20px;
-    background-color: #000;
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 10px 10px;
-    cursor: pointer;
-
-    transition: background-color 0.3s, color 0.3s;
-    min-width: 200px;
-    position: absolute;
-    bottom: 40px;
-    transform: translateX(-50%);
-}
-
-.login button:hover {
-    background-color: #fff;
-
-    /* Increase font weight on hover */
-    color: #000;
-    border: 1px solid #000;
-}
-
-#disconnectWalletButton {
-    display: none;
-    /* Hide Disconnect button by default */
-}
-
-.wallet-info {
-    position: relative;
-    font-size: 22px;
-}
-
-#walletAddress {
-    font-weight: 900;
-}
-
-#walletName {}
-
-#walletBalance {
-    font-style: italic;
-}
-
-.wallet-options {
-    width: 780px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin: 0;
-    padding: 0;
-}
-
-
-.header {
-    width: 680px;
-    height: 150px;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: 20px;
-    margin: 20px;
-    color: #fff;
-    border: 1px solid #fff;
-    background-color: #000;
-    transition: background-color 0.5s, color 0.5s;
-}
-
-.header:hover {
-
-    border-color: #ffffff;
-    background-color: #ffffff;
-    color: #000;
-}
-
-.option {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    text-align: center;
-    padding: 20px;
-    margin: 20px;
-    color: #fff;
-
-    transition: border-color 0.5s, color 0.5s;
-    transition: background-color 0.5s, color 0.5s;
-    border: 1px solid #fff;
-}
-
-.option:hover {
-    border-color: #fff;
-    background-color: #ffffff;
-    color: #000;
-
-}
-
-.optheader {
-    width: 680px;
-    height: 300px;
-
-    display: flex;
-    /* Make it a flex container */
-    justify-content: center;
-    /* Center horizontally */
-    align-items: center;
-    /* Center vertically */
-    position: relative;
-    vertical-align: middle;
-    padding: 20px;
-    margin: 20px;
-    color: #fff;
-    border: 1px solid #fff;
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: italic;
-    font-size: 80px;
-    letter-spacing: -2px;
-    background-color: #000;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.pbox {
-    width: 680px;
-    height: 300px;
-
-    display: flex;
-    /* Make it a flex container */
-    justify-content: center;
-    /* Center horizontally */
-    align-items: center;
-    /* Center vertically */
-    position: relative;
-    vertical-align: middle;
-    padding: 20px;
-    margin: 20px;
-    color: #fff;
-    border: 1px solid #fff;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-size: 22px;
-    text-align: justify;
-    background-color: #000;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.pbox:hover {
-    border: 1px solid #ffffff;
-    background-color: #ffffff;
-    color: #000;
-}
-
-.optheader:hover {
-    border: 1px solid #ffffff;
-    background-color: #ffffff;
-    color: #000;
-}
-
-.thinheader {
-    width: 680px;
-    height: 150px;
-
-    display: flex;
-    /* Make it a flex container */
-    justify-content: center;
-    /* Center horizontally */
-    align-items: center;
-    /* Center vertically */
-    position: relative;
-    vertical-align: middle;
-    padding: 20px;
-    margin: 20px;
-    color: #fff;
-    border: 1px solid #fff;
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: italic;
-    font-size: 80px;
-    line-height: 70px;
-    letter-spacing: -2px;
-    background-color: #000;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.thinheader:hover {
-    border: 1px solid #ffffff;
-    background-color: #ffffff;
-    color: #000;
-}
-
-
-.option h2 {
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: italic;
-    font-size: 26px;
-}
-
-
-.option button {
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: normal;
-    transition: font-weight 1s ease-in-out;
-    /* Add transition */
-    font-size: 20px;
-    background-color: #000;
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 10px 10px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s, color 0.3s;
-    min-width: 200px;
-    position: absolute;
-    bottom: 40px;
-    transform: translateX(-50%);
-}
-
-.option button:hover {
-    background-color: #fff;
-    color: #000;
-
-    border: 1px solid #000;
-
-}
-
 .social-icons {
     margin-top: 20px;
     position: absolute;
@@ -434,7 +470,7 @@ body {
 }
 
 .social-icons a {
-    color: #bb0000;
+    color: #d7d7d7;
     margin: 0 10px;
     font-size: 40px;
     text-decoration: none;
@@ -460,7 +496,32 @@ body {
     /* Telegram color */
 }
 
+/* List Style Options */
 ul.liste {
+line-height: 14px;
     text-align: left;
-    list-style-type: square;
+    list-style-type: square; /* Other options: disc, circle, decimal, decimal-leading-zero, 
+                                lower-roman, upper-roman, lower-alpha, upper-alpha, 
+                                lower-greek, none, etc. */
+    list-style-position: outside; /* 'outside' (default) places the marker outside the content box
+                                     'inside' places the marker inside the content box */
+    list-style-image: none; /* Can use url('path/to/image.png') to use custom bullet images */
+    
+    /* Positioning list elements */
+    padding-left: 20px; /* Controls indentation of the entire list */
+    margin-left: 15px; /* Alternative way to adjust list position */
+    
+    /* For more precise control of list items */
+    /* display: flex; */ /* Can be used for horizontal lists */
+    /* justify-content: space-between; */ /* Controls spacing between items when using flex */
+}
+
+/* Individual list item positioning can be controlled with: */
+
+ul.liste li {
+    font-size: 20px;
+    line-height: 12px;
+    margin-bottom: 0px; /* Space between list items */
+    padding: 5px; /* Internal spacing */
+    position: relative; /* For custom positioning */
 }
