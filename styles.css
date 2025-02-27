@@ -5,6 +5,19 @@
     box-sizing: border-box;
 }
 
+/*
+body
+- wrapper
+- language selector
+- container  
+- + baslik
+- + wallet options
+- - + option
+- - - + liste
+- - + option wide 
+- - + pbox
+*/
+
 button:hover {
     cursor: crosshair;
 }
@@ -183,7 +196,6 @@ body {
     }
 }
 
-
 .slogan {
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
@@ -238,19 +250,6 @@ body {
     padding: 0;
 }
 
-/*
-body
-- wrapper
-- language selector
-- container  
-- + baslik
-- + wallet options
-- - + option
-- - - + liste
-- - + option wide 
-- - + pbox
-*/
-
 .baslik {
     height: 300px;
     justify-content: center;
@@ -277,7 +276,6 @@ body
         width: 360px;
         height: 300px;
         grid-column: 1 / -1;
-        /* 360px width for phones */
     }
 }
 
@@ -416,7 +414,7 @@ body
     font-weight: 100;
     font-style: italic;
     font-size: 30px;
-    padding-bottom: 20px;
+    padding: 10px 0px 20px 0px;
 }
 
 .option button {
@@ -425,7 +423,6 @@ body
     font-weight: 100;
     font-style: normal;
     transition: font-weight 1s ease-in-out;
-    /* Add transition */
     font-size: 20px;
     background-color: #000;
     color: #fff;
@@ -477,51 +474,36 @@ body
 }
 
 .social-icons a.twitter:hover {
-    color: #000;
+    color: #0066ff;
     /* Twitter color */
 }
 
 .social-icons a.telegram:hover {
-    color: #000;
-    /* Telegram color */
+    color: #005bca;
 }
 
 .social-icons a.discord:hover {
-    color: #000;
-    /* Telegram color */
+    color: #4804f2;
 }
 
 .social-icons a.email:hover {
     color: #000;
-    /* Telegram color */
 }
 
-/* List Style Options */
 ul.liste {
-line-height: 14px;
+    line-height: 14px;
     text-align: left;
-    list-style-type: square; /* Other options: disc, circle, decimal, decimal-leading-zero, 
-                                lower-roman, upper-roman, lower-alpha, upper-alpha, 
-                                lower-greek, none, etc. */
-    list-style-position: outside; /* 'outside' (default) places the marker outside the content box
-                                     'inside' places the marker inside the content box */
-    list-style-image: none; /* Can use url('path/to/image.png') to use custom bullet images */
-    
-    /* Positioning list elements */
-    padding-left: 20px; /* Controls indentation of the entire list */
-    margin-left: 15px; /* Alternative way to adjust list position */
-    
-    /* For more precise control of list items */
-    /* display: flex; */ /* Can be used for horizontal lists */
-    /* justify-content: space-between; */ /* Controls spacing between items when using flex */
+    list-style-type: square;
+    list-style-position: outside;
+    list-style-image: none;
+    padding-left: 20px;
+    margin-left: 15px;
 }
-
-/* Individual list item positioning can be controlled with: */
 
 ul.liste li {
     font-size: 20px;
     line-height: 12px;
-    margin-bottom: 0px; /* Space between list items */
-    padding: 5px; /* Internal spacing */
-    position: relative; /* For custom positioning */
+    margin-bottom: 0px;
+    padding: 5px;
+    position: relative;
 }
