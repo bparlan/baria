@@ -308,14 +308,12 @@ body {
 @media (min-width: 768px) {
     .option {
         grid-column: auto;
-        transform: translateX(0);
     }
 }
 
 @media (max-width: 767px) {
     .option {
-        grid-column: auto;
-        transform: translateX(0);
+        grid-column: 1;
     }
 }
 
