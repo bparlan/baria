@@ -1,28 +1,28 @@
-# Baria FinGuard Wallet
+# BariaDAO
 
-**Baria: Decentralized Collective Intelligence**
+**Collective Intelligence**
 
-This project presents a decentralized finance (DeFi) wallet interface concept, focusing on community governance, treasury management, and various investment strategies.  It leverages Web3 technologies for enhanced user control and security.
+This project presents a decentralized finance (DeFi) wallet interface concept, focusing on community governance, treasury management, and various investment strategies. It leverages Web3 technologies for enhanced user control and security.
 
 ## Features
 
 **Wallet Interaction:**
 
-* **Web3 Login:**  Provides complete independency, non-custodial ownership, private communication, and the best user experience. Connects to user's Web3 wallet.
-* **Web2 Login:** Offers limited functionality without asset ownership and relies on centralized platforms.
+- **Web3 Login:** Provides complete independency, non-custodial ownership, private communication, and the best user experience. Connects to user's Web3 wallet.
+- **Web2 Login:** Offers limited functionality without asset ownership and relies on centralized platforms.
 
 **Collective Intelligence:**
 
-* **DAO Treasury Management:** Enables a Treasury Committee to manage organizational funds.
-* **Dashboard & Vaults:** Provides insights into various market indicators and vault performance, including:
-    * Halving BullBear
-    * Fear and Greed Index
-    * Crash Fishing Perp
-    * High Risk/Reward Index
-    * Onchain Data Dashboard
-    * Vault statistics (TVL, APR, Age)
-    * 7-day performance graph
-    * Deposit and withdrawal functionality
+- **DAO Treasury Management:** Enables a Treasury Committee to manage organizational funds.
+- **Dashboard & Vaults:** Provides insights into various market indicators and vault performance, including:
+  - Halving BullBear
+  - Fear and Greed Index
+  - Crash Fishing Perp
+  - High Risk/Reward Index
+  - Onchain Data Dashboard
+  - Vault statistics (TVL, APR, Age)
+  - 7-day performance graph
+  - Deposit and withdrawal functionality
 
 **Vaults:**
 
@@ -30,29 +30,29 @@ Vaults function like liquidity pools, allowing DAOs, institutions, and individua
 
 **Personal Finance:**
 
-* **Personal Retirement:** Facilitates independent retirement planning and saving.
-* **Children's Future:** Enables early retirement investments for children.
-* **Send & Receive Cash:** Securely stores and manages cash savings.
-* **Transaction History:** Displays a history of transactions, filterable by Deposits, Withdrawals, and Swaps.
+- **Personal Retirement:** Facilitates independent retirement planning and saving.
+- **Children's Future:** Enables early retirement investments for children.
+- **Send & Receive Cash:** Securely stores and manages cash savings.
+- **Transaction History:** Displays a history of transactions, filterable by Deposits, Withdrawals, and Swaps.
 
 **Governance:**
 
-* **Governance Forum:** Provides a platform for community governance discussions.
-* **Proposals:** Allows users to submit and vote on community proposals (from the core team or community).
+- **Governance Forum:** Provides a platform for community governance discussions.
+- **Proposals:** Allows users to submit and vote on community proposals (from the core team or community).
 
 **Communication:**
 
-* **Private Messaging:** Enables secure direct messaging between users.
-* **Public Chat:** Offers public channels for community discussions.
-* **Community Links:** Provides links to social media platforms (Twitter, Telegram, Discord, Email) for updates and support.
+- **Private Messaging:** Enables secure direct messaging between users.
+- **Public Chat:** Offers public channels for community discussions.
+- **Community Links:** Provides links to social media platforms (Twitter, Telegram, Discord, Email) for updates and support.
 
 **Experimental Feature:**
 
-* **Parlan Tech (CORE):** A highly experimental feature.
+- **Parlan Tech (CORE):** A highly experimental feature.
 
 ## Getting Started
 
-This project utilizes `ethers.js` for interacting with the Ethereum blockchain.  The core functionality is implemented in `script.js`.  The styling is handled by `styles.css`.
+This project utilizes `ethers.js` for interacting with the Ethereum blockchain. The core functionality is implemented in `script.js`. The styling is handled by `styles.css`.
 
 ## Contributing & Connection
 
@@ -63,7 +63,7 @@ This project utilizes `ethers.js` for interacting with the Ethereum blockchain. 
 
 ## License
 
-This project is open-source.  Please refer to the license file for details.
+This project is open-source. Please refer to the license file for details.
 
 ## Disclaimer
 
