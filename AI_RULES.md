@@ -1,0 +1,5 @@
+- Do not refactor globally unless asked
+- Prefer small diffs
+- One concern per commit
+- Never touch package.json unless task is dependency-related
+- Ask before changing API contracts
